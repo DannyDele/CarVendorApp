@@ -1,0 +1,17 @@
+<%- layout('layouts/boilerplate') %>
+<section class="p-4">
+    <div class="d-flex flex-row mb-3">
+        <div  class="p-2">
+    <a href="" class="btn btn-primary">Add Company</a>
+    </div>
+    
+    <div  class="p-2">
+          <form action="/cars/<%= car._id %>?_method=DELETE" method="post">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+    </div>
+    </div>
+    <h1>More about <%= car.model %> Model.</h1>
+    <p>Car Model: <%= car.model %></p>
+    <small>Car Production Year: <%= car.year %></small>
+</section>

@@ -1,0 +1,8 @@
+<%- layout('layouts/boilerplate') %>
+<h1>Car Home Page</h1>
+<a class="btn btn-primary" href="/cars/new">Add Car</a>
+<ul>
+    <% for(let car of cars){ %>
+        <li><a href="/cars/<%= car._id %>"><%= car.model %></a></li>
+ <%   } %>
+</ul>

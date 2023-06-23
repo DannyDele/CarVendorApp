@@ -1,0 +1,21 @@
+<%- layout('layouts/boilerplate') %>
+
+<section>
+    <h1>Car Model</h1>
+<form class="row g-3 mt-2" action="/companies/<%= company._id %>/cars" method="post">
+    <div class="col-md-6">
+  <div class="col">
+     <label for="model" class="form-label">Car Model</label>
+    <input type="text" class="form-control" id="model" name="model" placeholder="Car model.." aria-label="First name">
+  </div>
+  <div class="col">
+    <label for="year" class="form-label">Production Year</label>
+    <input type="text" id="year" name="year" class="form-control" placeholder="Year of production..">
+  </div>
+
+  
+  <div class="col-12 mt-2">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</section>

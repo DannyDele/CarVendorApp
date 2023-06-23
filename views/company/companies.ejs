@@ -1,0 +1,21 @@
+<%- layout('layouts/boilerplate') %>
+
+<section class="p-3">
+<a href="/companies/new" class="btn btn-primary">Add Company</a>
+
+            <div class="cus-card-flex">
+    <% for(let company of companies){ %> 
+
+            <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= company.name %></h5>
+    <p class="card-text">Info: <%= company.info %>.</p>
+    <a href="/companies/<%= company._id %>">view</a>
+  </div>
+</div>
+    <% } %>
+    </div>
+
+
+</section>
