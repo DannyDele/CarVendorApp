@@ -1,21 +1,36 @@
-<%- layout('layouts/boilerplate') %>
+<%- layout('layouts/boilerplate') %> 
 
-<form class="row g-3 mt-2" action="/companies/<%= company._id %>?_method=PATCH" method="post">
+
+<div class="container">
+<form class="row g-3 pt-2" action="/companies/<%= company._id %>?_method=PATCH" method="post">
     <div class="col-md-6">
-  <div class="col">
+  <div class="col-md-12">
      <label for="name" class="form-label">Company Name</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Company name.." aria-label="First name" value="<%= company.name  %>">
   </div>
-  <div class="col">
+  <div class="col-md-12">
     <label for="email" class="form-label">Company Email</label>
     <input type="email" id="email" name="email" class="form-control" placeholder="Company email.." value="<%= company.email %>">
   </div>
-  <div class="col">
+  <div class="col-md-12">
     <label for="location" class="form-label">Company Location</label>
     <input type="text" class="form-control" name="location" id="location" placeholder="1234 Main St" value="<%= company.location %>">
+  </div>
+   <div class="col-md-12">
+    <label for="price" class="form-label">Company price</label>
+    <input type="number" class="form-control" name="price" id="price">
+  </div>
+  <div class="col-md-12">
+    <label for="image" class="form-label">Image</label>
+    <input type="text" class="form-control" name="image" id="image">
+  </div>
+  <div class="col-md-12">
+    <label for="info" class="form-label">Info</label>
+      <textarea class="form-control" name="info" id="info" cols="30" rows="5"></textarea>
   </div>
   
   <div class="col-12 mt-2">
     <button type="submit" class="btn btn-primary">Edit</button>
   </div>
 </form>
+</div>

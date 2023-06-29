@@ -63,3 +63,87 @@
   </button>
 </div>
 </section>
+
+
+<section class="sub-section">
+   <div class="container">
+      <div class="d-flex flex-row pt-4">
+        <div>
+          <div class="cus-report">
+          <h4>CONSUMER REPORTS RANKS THE BEST CAR BRANDS</h4>
+          <p>We are pleased to announce that Consumer Reports has 
+            ranked Mazda in their “Best Car Brands for 2022.” 
+            Read more about how rankings are selected by clicking the link below.</p>
+            </div>
+             <a href= "#" class= "cus-btn">Learn More</a>
+        </div>
+        <div>
+          <img class="cus-img" src="https://www.mazdausa.com/siteassets/images/consumer-reports/update/homepage/Consumer-Reports-Best-and-Worst-Brands?w=767" alt="car rank pic">
+        </div>
+        
+      </div>
+  </div>
+</section>
+
+<section class="sub-section-1">
+    <div class="container">
+        <div class="cus-grid pt-4">
+         <div >
+          <img class="cus-img" src="/img/pexels-luis-quintero-3689534.jpg" alt="">
+         </div>
+         <div class="swap-on-mobile mt">
+          <div class="mt-4">
+          <h4 >MAZDA SKYACTIV® TECHNOLOGY: A SMARTER APPROACH</h4>
+          <p>When the components of a system are engineered to work together, 
+            that system will operate at peak efficiency.
+             This is the simple idea behind Mazda Skyactiv® 
+             Technology. But efficiency isn't the only benefit.</p>
+             </div>
+         </div>
+         <div class="mt">
+          <div class="mt-4">
+          <h4>A WELCOMING SPACE</h4>
+          <p>A Mazda interior represents the unmistakable bond between driver and car.
+            Every detail is expertly crafted, every component intuitively 
+            placed, creating a feeling of enveloping comfort that makes 
+            every journey more inspiring.</p>
+            </div>
+         </div>
+         <div>
+          <img class="cus-img" src="/img/pexels-luke-miller-16510640.jpg" alt="">
+         </div>
+
+        </div>
+    </div>
+</section>
+
+<section  class="sub-section-2">
+  
+   <h1>Another Sub Section</h1>
+
+       <div class="display-car-flex">
+   <% companies.slice(0, 3).forEach(el => {  %>
+
+       <div class="display-car-flex-items">
+        <div class="geeks">
+        <img class="cus-img" src="/img/pexels-yurii-hlei-1545743.jpg" alt="">
+        </div>
+        <div class="inner-flex-content">
+          <div>
+        <h5><%= el.name %></h5>
+        </div>
+        <div class="flex-btn-mt">
+         <a class="cus-btn" href="">Click Here</a>
+         </div>
+         </div>
+        </div>
+        
+ <% });   %>
+  </div>
+
+   <div class="container">
+   
+
+  </div>
+
+</section>

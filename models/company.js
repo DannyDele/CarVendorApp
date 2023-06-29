@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
-const Car = require('./car') 
+const Car = require('./car');
+
+
+
 const CompanySchema = new Schema({
     name:{
         type: String,
@@ -35,7 +38,7 @@ const CompanySchema = new Schema({
 
 CompanySchema.post('findOneAndDelete', async function(company){
     if(company.cars.length){
-        const res = await Car.deleteMany({_id: {$in: Company.cars}});
+        const res = await Car.deleteMany({_id: {$in: company.cars}});
         console.log(res) 
     }
 })

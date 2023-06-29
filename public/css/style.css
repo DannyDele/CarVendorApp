@@ -9,6 +9,37 @@
     height: 100vh;
 }
 
+/* Variables */
+
+:root{
+    --primary-col: rgb(250, 247, 247);
+    --col-black: rgb(0, 0, 0);
+    --cus-btn: white;
+    --font-fam-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cus-img{
+    width: 400px;
+    height: 400px;
+}
+
+.cus-btn{
+    color: black;
+    text-transform: uppercase;
+    padding: .8rem 1.2rem;
+    text-decoration: none;
+    border: none;
+    border-radius: .3rem;
+    font-family: var(--font-fam-style);
+    letter-spacing: 2px;
+    font-size: .9rem;
+}
+
+/* Styling for Home.ejs file */
+.sub-section {
+    height: 80vh;
+    background-color: rgb(247,245,246);
+}
 
  #carouselExampleCaptions .carousel-inner .carousel-item{
     height: 100vh;
@@ -39,10 +70,15 @@
     position: relative;
 }
 
-.carousel-caption .cus-flex .cus-text h1, h5{
+.carousel-caption .cus-flex .cus-text h1{
     letter-spacing: 4px;
     word-spacing: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-fam-style);
+}
+.carousel-caption .cus-flex .cus-text h5{
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    font-family: var(--font-fam-style);
 }
 
 
@@ -58,10 +94,133 @@
     text-decoration: none;
     border: none;
     border-radius: .3rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-family: var(--font-fam-style);
     letter-spacing: 2px;
     font-size: .9rem;
 }
+
+.carousel-caption .cus-btn:hover{
+    background-color: rgb(153,153,153);
+}
+.sub-section .d-flex{
+    display: flex;
+}
+.sub-section .d-flex .cus-report{
+    margin-top: 4rem;
+}
+
+.sub-section .d-flex img{
+    width: 600px;
+    height: 400px;
+}
+
+
+.sub-section .d-flex .cus-report h4{
+    letter-spacing: 4px;
+    font-family: var(--font-fam-style);
+}
+
+.sub-section .d-flex .cus-btn{
+    background-color: var(--col-black);
+    color: white;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.sub-section .d-flex .cus-btn:hover{
+    background-color: grey;
+}
+
+
+.sub-section-1{
+    height: 140vh;
+    background-color: white;
+}
+
+.sub-section-1 .cus-grid{
+   display: grid;
+   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 1rem;
+}
+
+.sub-section-1 .cus-grid h4{
+    letter-spacing: 4px;
+    font-family: var(--font-fam-style);
+}
+
+.sub-section-1 .cus-grid .mt .mt-4{
+    padding-top: 4rem;
+}
+
+.sub-section-1 .cus-grid .mt p {
+    padding-top: 2rem;
+}
+
+
+
+.sub-section-2{
+    background-color: rgb(247, 245, 246);
+    height: 100vh;
+}
+
+.sub-section-2 .display-car-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sub-section-2 .display-car-flex .display-car-flex-items{
+    margin: 0 1rem;
+    position: relative;
+}
+
+.sub-section-2 .display-car-flex .display-car-flex-items .inner-flex-content {
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.sub-section-2 .display-car-flex .display-car-flex-items .inner-flex-content .flex-btn-mt{
+    margin-top: 1rem;
+}
+
+.sub-section-2 .display-car-flex .display-car-flex-items .inner-flex-content h5{
+    letter-spacing: 4px;
+    word-spacing: px;
+    font-family: var(--font-fam-style);
+}
+
+.sub-section-2 .display-car-flex .display-car-flex-items .geeks{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.sub-section-2 .display-car-flex .display-car-flex-items .geeks img{
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+}
+
+.sub-section-2 .display-car-flex .display-car-flex-items .geeks:hover img{
+    transform: scale(1.1);
+}
+
+.sub-section-2 .display-car-flex .inner-flex-content .cus-btn{
+    background-color: var(--col-black);
+    color: var(--primary-col);
+}
+
+.sub-section-2 .display-car-flex .inner-flex-content .cus-btn:hover{
+    background-color: grey;
+}
+
+/* ********************************************************************************** */
+/* End of Home.ejs Style */
+/* ********************************************************************************** */
 
 /* Styling for Companies.ejs file */
  .cus-card-bg{
@@ -75,9 +234,81 @@
     flex-wrap: wrap;
 } 
 
+/* ********************************************************************************** */
+/* End of Component.ejs Style */
+/* ********************************************************************************** */
 
 /* Styling for Show.ejs file */
 .cus-show-flex{
     display: flex;
     justify-content: space-between;
+}
+
+/* ********************************************************************************** */
+/* End of Show.ejs Style */
+/* ********************************************************************************** */
+
+
+
+
+
+
+
+
+
+/* Media Queries for Smaller screen sizes */
+
+@media screen and (max-width: 600px){
+    /* Sub Section */
+     .carousel-caption .cus-flex .cus-text {
+        top: -40vh;
+        position: relative;
+    }
+        .sub-section .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .carousel-caption .cus-flex .cus-text h1 {
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            font-family: var(--font-fam-style);
+        }
+    
+        .carousel-caption .cus-flex .cus-text h5 {
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            font-family: var(--font-fam-style);
+        }
+
+        /* Sub Section-1 */
+
+    .sub-section-1 {
+        height: 250vh;
+        background-color: white;
+    }
+
+    .sub-section-1 .cus-grid {
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+
+        .sub-section-1 .cus-grid .swap-on-mobile{
+            grid-row: 1/2;
+        }
+
+    .sub-section-1 .cus-grid h4 {
+        letter-spacing: 4px;
+        font-family: var(--font-fam-style);
+    }
+
+    .sub-section-1 .cus-grid .mt .mt-4 {
+        padding-top: 4rem;
+    }
+
+    .sub-section-1 .cus-grid .mt p {
+        padding-top: 2rem;
+    }
 }
